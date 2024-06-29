@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.effect {
+  @apply transition-colors duration-300 ease-in-out
+}
+
+.btn-add {
+  @apply bg-sky-900 hover:bg-sky-950 rounded-md py-1.5 flex items-center
+}
+
+.btn-close {
+  @apply mt-1.5 bg-pink-700 hover:bg-pink-800 rounded-md py-1.5 px-3 flex items-center
+}
+
+body {
+  @apply dark:bg-[#363636] bg-neutral-200 dark:text-zinc-200 text-zinc-800
+}

@@ -4,15 +4,15 @@ export const SvgCircle = (props) => (
     height={18}
     fill='none'
     viewBox='0 0 24 24'
+    stroke='currentColor'
+    strokeLinecap='round'
+    strokeLinejoin='round'
     strokeWidth={2}
+    className='icon icon-tabler icons-tabler-outline icon-tabler-circle'
     {...props}
   >
-    <path
-      stroke='currentColor'
-      strokeLinecap='round'
-      strokeLinejoin='round'
-      d='M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10Z'
-    />
+    <path stroke='none' d='M0 0h24v24H0z' />
+    <path d='M3 12a9 9 0 1 0 18 0 9 9 0 1 0-18 0' />
   </svg>
 )
 
@@ -21,16 +21,16 @@ export const SvgSquare = (props) => (
     width={18}
     height={18}
     fill='none'
-    strokeWidth={2}
     viewBox='0 0 24 24'
+    stroke='currentColor'
+    strokeLinecap='round'
+    strokeLinejoin='round'
+    strokeWidth={2}
+    className='icon icon-tabler icons-tabler-outline icon-tabler-square'
     {...props}
   >
-    <path
-      stroke='currentColor'
-      strokeLinecap='round'
-      strokeLinejoin='round'
-      d='M21 3.6v16.8a.6.6 0 0 1-.6.6H3.6a.6.6 0 0 1-.6-.6V3.6a.6.6 0 0 1 .6-.6h16.8a.6.6 0 0 1 .6.6Z'
-    />
+    <path stroke='none' d='M0 0h24v24H0z' />
+    <path d='M3 5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z' />
   </svg>
 )
 
@@ -39,56 +39,52 @@ export const SvgRhombus = (props) => (
     width={18}
     height={18}
     fill='none'
-    strokeWidth={2}
     viewBox='0 0 24 24'
+    stroke='currentColor'
+    strokeLinecap='round'
+    strokeLinejoin='round'
+    strokeWidth={2}
+    className='icon icon-tabler icons-tabler-outline icon-tabler-square-rotated'
     {...props}
   >
-    <path
-      stroke='currentColor'
-      strokeLinecap='round'
-      strokeLinejoin='round'
-      d='M11.576 1.424a.6.6 0 0 1 .848 0l10.152 10.152a.6.6 0 0 1 0 .848L12.424 22.576a.6.6 0 0 1-.848 0L1.424 12.424a.6.6 0 0 1 0-.848L11.576 1.424Z'
-    />
+    <path stroke='none' d='M0 0h24v24H0z' />
+    <path d='m13.446 2.6 7.955 7.954a2.045 2.045 0 0 1 0 2.892l-7.955 7.955a2.045 2.045 0 0 1-2.892 0l-7.955-7.955a2.045 2.045 0 0 1 0-2.892l7.955-7.955a2.045 2.045 0 0 1 2.892 0z' />
   </svg>
 )
 
-export const SvgAlignHorizontalSpacing = (props) => (
+export const SvgSpacingHorizontal = (props) => (
   <svg
     width={18}
     height={18}
     fill='none'
-    strokeWidth={2}
     viewBox='0 0 24 24'
+    stroke='currentColor'
+    strokeLinecap='round'
+    strokeLinejoin='round'
+    strokeWidth={2}
+    className='icon icon-tabler icons-tabler-outline icon-tabler-spacing-horizontal'
     {...props}
   >
-    <path
-      stroke='currentColor'
-      strokeLinecap='round'
-      strokeLinejoin='round'
-      d='M3 22V2M21 22V2'
-    />
-    <path
-      stroke='currentColor'
-      d='M15 16H9a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2Z'
-    />
+    <path stroke='none' d='M0 0h24v24H0z' />
+    <path d='M20 20h-2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2M4 20h2a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H4M12 8v8' />
   </svg>
 )
 
-export const SvgMinusSquare = (props) => (
+export const SvgMinus = (props) => (
   <svg
     width={18}
     height={18}
     fill='none'
-    strokeWidth={2}
     viewBox='0 0 24 24'
+    stroke='currentColor'
+    strokeLinecap='round'
+    strokeLinejoin='round'
+    strokeWidth={2}
+    className='icon icon-tabler icons-tabler-outline icon-tabler-minus'
     {...props}
   >
-    <path
-      stroke='currentColor'
-      strokeLinecap='round'
-      strokeLinejoin='round'
-      d='M9 12h6M21 3.6v16.8a.6.6 0 0 1-.6.6H3.6a.6.6 0 0 1-.6-.6V3.6a.6.6 0 0 1 .6-.6h16.8a.6.6 0 0 1 .6.6Z'
-    />
+    <path stroke='none' d='M0 0h24v24H0z' />
+    <path d='M5 12h14' />
   </svg>
 )
 
@@ -97,21 +93,15 @@ export const SvgRefresh = (props) => (
     width={18}
     height={18}
     fill='none'
-    strokeWidth={2}
     viewBox='0 0 24 24'
+    stroke='currentColor'
+    strokeLinecap='round'
+    strokeLinejoin='round'
+    strokeWidth={2}
+    className='icon icon-tabler icons-tabler-outline icon-tabler-refresh'
     {...props}
   >
-    <path
-      stroke='currentColor'
-      strokeLinecap='round'
-      strokeLinejoin='round'
-      d='M21.888 13.5C21.164 18.311 17.013 22 12 22 6.477 22 2 17.523 2 12S6.477 2 12 2c4.1 0 7.625 2.468 9.168 6'
-    />
-    <path
-      stroke='currentColor'
-      strokeLinecap='round'
-      strokeLinejoin='round'
-      d='M17 8h4.4a.6.6 0 0 0 .6-.6V3'
-    />
+    <path stroke='none' d='M0 0h24v24H0z' />
+    <path d='M20 11A8.1 8.1 0 0 0 4.5 9M4 5v4h4M4 13a8.1 8.1 0 0 0 15.5 2m.5 4v-4h-4' />
   </svg>
 )

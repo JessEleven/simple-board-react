@@ -13,11 +13,11 @@ body {
 
 /* Add card Component */
 .btn-add {
-  @apply bg-neutral-500 hover:bg-neutral-600 rounded-md py-1.5 flex items-center
+  @apply bg-neutral-500 hover:bg-neutral-600 rounded-md py-1.5 flex gap-x-0.5 items-center effect
 }
 
 .btn-close {
-  @apply mt-1.5 bg-pink-700 hover:bg-pink-800 rounded-md py-1.5 px-3 flex items-center
+  @apply mt-1.5 bg-pink-700 hover:bg-pink-800 rounded-md py-1.5 px-3 flex gap-x-0.5 items-center effect
 }
 
 .btn-editor {

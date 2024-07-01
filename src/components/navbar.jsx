@@ -5,11 +5,11 @@ import MenuMobile from './menu-mobile'
 function Navbar () {
   return (
     <nav className='border-b border-orange-500'>
-      <div className='mx-auto max-w-screen-xl px-4 md:px-0'>
+      <div className='mx-auto max-w-screen-xl px-4 md:px-8'>
         <div className='flex h-14 items-center justify-between'>
           <Link translate='no' to='/' className='flex gap-x-1.5 items-center'>
-            <img src='/logo.svg' alt='SB' className='w-8 h-8' />
-            <h1 className='text-2xl flex items-center font-semibold'>Simple Board</h1>
+            <img src='/logo.svg' alt='SB' className='w-7 h-7' />
+            <h1 className='text-xl hidden md:flex items-center font-semibold'>Simple Board</h1>
           </Link>
 
           <div className='md:flex md:items-center md:gap-4'>

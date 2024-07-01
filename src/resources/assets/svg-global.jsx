@@ -56,18 +56,18 @@ export const SvgMoon = (props) => (
 
 export const SvgSystem = (props) => (
   <svg
-    width={22}
-    height={22}
+    width={20}
+    height={20}
     fill='none'
     viewBox='0 0 24 24'
     stroke='currentColor'
     strokeLinecap='round'
     strokeLinejoin='round'
     strokeWidth={2}
-    className='icon icon-tabler icons-tabler-outline icon-tabler-device-laptop'
+    className='icon icon-tabler icons-tabler-outline icon-tabler-device-desktop'
     {...props}
   >
     <path stroke='none' d='M0 0h24v24H0z' />
-    <path d='M3 19h18M5 7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1z' />
+    <path d='M3 5a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5zM7 20h10M9 16v4M15 16v4' />
   </svg>
 )

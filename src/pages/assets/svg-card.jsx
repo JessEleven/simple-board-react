@@ -1,29 +1,19 @@
-export const SvgBonfire = (props) => (
+// Burn barrel Component
+export const SvgCampfire = (props) => (
   <svg
     width={40}
     height={40}
     fill='none'
     viewBox='0 0 24 24'
+    stroke='currentColor'
+    strokeLinecap='round'
+    strokeLinejoin='round'
     strokeWidth={2}
+    className='icon icon-tabler icons-tabler-outline icon-tabler-campfire'
     {...props}
   >
-    <path
-      stroke='currentColor'
-      strokeLinecap='round'
-      strokeLinejoin='round'
-      d='M9 14c0 1.61 1.377 2 3.076 2 2.89 0 3.845-1.667 1.922-5-2.691 3-3.076-1.667-2.691-3C10.153 10 9 11.879 9 14Z'
-    />
-    <path
-      stroke='currentColor'
-      strokeLinecap='round'
-      strokeLinejoin='round'
-      d='M12 16c3.156 0 5-2.098 5-5.688S12 3 12 3s-5 3.723-5 7.313S8.844 16 12 16Z'
-    />
-    <path
-      stroke='currentColor'
-      strokeLinecap='round'
-      d='m4.273 21.07 15.454-4.14M4.273 16.93 12 19M19.727 21.07l-3.863-1.035'
-    />
+    <path stroke='none' d='M0 0h24v24H0z' />
+    <path d='m4 21 16-4M20 21 4 17M12 15a4 4 0 0 0 4-4c0-3-2-3-2-8-4 2-6 5-6 8a4 4 0 0 0 4 4z' />
   </svg>
 )
 
@@ -33,74 +23,90 @@ export const SvgTrash = (props) => (
     height={40}
     fill='none'
     viewBox='0 0 24 24'
+    stroke='currentColor'
+    strokeLinecap='round'
+    strokeLinejoin='round'
     strokeWidth={2}
+    className='icon icon-tabler icons-tabler-outline icon-tabler-trash'
     {...props}
   >
-    <path
-      stroke='currentColor'
-      strokeLinecap='round'
-      strokeLinejoin='round'
-      d='m20 9-1.995 11.346A2 2 0 0 1 16.035 22h-8.07a2 2 0 0 1-1.97-1.654L4 9M21 6h-5.625M3 6h5.625m0 0V4a2 2 0 0 1 2-2h2.75a2 2 0 0 1 2 2v2m-6.75 0h6.75'
-    />
+    <path stroke='none' d='M0 0h24v24H0z' />
+    <path d='M4 7h16M10 11v6M14 11v6M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2l1-12M9 7V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3' />
   </svg>
 )
 
+// Add card Component
 export const SvgPlus = (props) => (
   <svg
     width={18}
     height={18}
     fill='none'
     viewBox='0 0 24 24'
+    stroke='currentColor'
+    strokeLinecap='round'
+    strokeLinejoin='round'
     strokeWidth={2}
+    className='icon icon-tabler icons-tabler-outline icon-tabler-plus'
     {...props}
   >
-    <path
-      stroke='currentColor'
-      strokeLinecap='round'
-      strokeLinejoin='round'
-      d='M6 12h6m6 0h-6m0 0V6m0 6v6'
-    />
+    <path stroke='none' d='M0 0h24v24H0z' />
+    <path d='M12 5v14M5 12h14' />
   </svg>
 )
 
-export const SvgXmark = (props) => (
+export const SvgX = (props) => (
   <svg
     width={18}
     height={18}
     fill='none'
     viewBox='0 0 24 24'
+    stroke='currentColor'
+    strokeLinecap='round'
+    strokeLinejoin='round'
     strokeWidth={2}
+    className='icon icon-tabler icons-tabler-outline icon-tabler-x'
     {...props}
   >
-    <path
-      stroke='currentColor'
-      strokeLinecap='round'
-      strokeLinejoin='round'
-      d='M6.758 17.243 12.001 12m5.243-5.243L12 12m0 0L6.758 6.757M12.001 12l5.243 5.243'
-    />
+    <path stroke='none' d='M0 0h24v24H0z' />
+    <path d='M18 6 6 18M6 6l12 12' />
   </svg>
 )
 
+// Card Component
 export const SvgCopy = (props) => (
   <svg
-    width={20}
-    height={20}
+    width={18}
+    height={18}
     fill='none'
-    strokeWidth={2}
     viewBox='0 0 24 24'
+    stroke='currentColor'
+    strokeLinecap='round'
+    strokeLinejoin='round'
+    strokeWidth={2}
+    className='icon icon-tabler icons-tabler-outline icon-tabler-copy'
     {...props}
   >
-    <path
-      stroke='currentColor'
-      strokeLinecap='round'
-      strokeLinejoin='round'
-      d='M19.4 20H9.6a.6.6 0 0 1-.6-.6V9.6a.6.6 0 0 1 .6-.6h9.8a.6.6 0 0 1 .6.6v9.8a.6.6 0 0 1-.6.6Z'
-    />
-    <path
-      stroke='currentColor'
-      strokeLinecap='round'
-      strokeLinejoin='round'
-      d='M15 9V4.6a.6.6 0 0 0-.6-.6H4.6a.6.6 0 0 0-.6.6v9.8a.6.6 0 0 0 .6.6H9'
-    />
+    <path stroke='none' d='M0 0h24v24H0z' />
+    <path d='M7 9.667A2.667 2.667 0 0 1 9.667 7h8.666A2.667 2.667 0 0 1 21 9.667v8.666A2.667 2.667 0 0 1 18.333 21H9.667A2.667 2.667 0 0 1 7 18.333z' />
+    <path d='M4.012 16.737A2.005 2.005 0 0 1 3 15V5c0-1.1.9-2 2-2h10c.75 0 1.158.385 1.5 1' />
+  </svg>
+)
+
+export const SvgClipboard = (props) => (
+  <svg
+    width={18}
+    height={18}
+    fill='none'
+    viewBox='0 0 24 24'
+    stroke='currentColor'
+    strokeLinecap='round'
+    strokeLinejoin='round'
+    strokeWidth={2}
+    className='icon icon-tabler icons-tabler-outline icon-tabler-clipboard'
+    {...props}
+  >
+    <path stroke='none' d='M0 0h24v24H0z' />
+    <path d='M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2' />
+    <path d='M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v0a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2z' />
   </svg>
 )

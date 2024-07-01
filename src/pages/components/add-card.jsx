@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { SvgPlus, SvgXmark } from '../assets/svg-card'
+import { SvgPlus, SvgX } from '../assets/svg-card'
 import { SvgAlignHorizontalSpacing, SvgCircle, SvgMinusSquare, SvgRefresh, SvgRhombus, SvgSquare } from '../assets/svg-editor'
 
 function AddCard ({ column, setCards }) {
@@ -49,30 +49,29 @@ function AddCard ({ column, setCards }) {
     <>
       {adding
         ? (
-          <motion.form className='mt-4' layout onSubmit={handleSubmit}>
-            <div className='mb-2.5 flex items-center justify-between'>
-
-              <button type='button' onClick={() => insertIcon('○ ')} className='flex items-center justify-center bg-neutral-100 rounded p-1.5 text-indigo-400'>
+          <motion.form className='mt-[18px] font-medium' layout onSubmit={handleSubmit}>
+            <div className='mb-2.5 py-1 px-3 flex justify-between items-center rounded-md border border-neutral-500'>
+              <button type='button' onClick={() => insertIcon('○ ')} className='btn-editor'>
                 <SvgCircle />
               </button>
 
-              <button type='button' onClick={() => insertIcon('▢ ')} className='flex items-center justify-center bg-neutral-100 rounded p-1.5 text-indigo-400'>
+              <button type='button' onClick={() => insertIcon('▢ ')} className='btn-editor'>
                 <SvgSquare />
               </button>
 
-              <button type='button' onClick={() => insertIcon('◇ ')} className='flex items-center justify-center bg-neutral-100 rounded p-1.5 text-indigo-400'>
+              <button type='button' onClick={() => insertIcon('◇ ')} className='btn-editor'>
                 <SvgRhombus />
               </button>
 
-              <button type='button' onClick={() => insertIcon('   ')} className='flex items-center justify-center bg-neutral-100 rounded p-1.5 text-indigo-400'>
+              <button type='button' onClick={() => insertIcon('   ')} className='btn-editor'>
                 <SvgAlignHorizontalSpacing />
               </button>
 
-              <button type='button' onClick={() => insertIcon('─')} className='flex items-center justify-center bg-neutral-100 rounded p-1.5 text-indigo-400'>
+              <button type='button' onClick={() => insertIcon('─')} className='btn-editor'>
                 <SvgMinusSquare />
               </button>
 
-              <button type='button' onClick={handleRefresh} className='flex items-center justify-center bg-neutral-100 rounded p-1.5 text-indigo-400'>
+              <button type='button' onClick={handleRefresh} className='btn-editor'>
                 <SvgRefresh />
               </button>
             </div>
@@ -82,14 +81,14 @@ function AddCard ({ column, setCards }) {
               onChange={handleTextChange}
               autoFocus
               value={text}
-              rows={3}
-              placeholder='Add new task 🚀'
-              className='w-full rounded-md border border-violet-400 p-3 text-sm text-neutral-50 placeholder-zinc-200 focus:outline-0 bg-violet-400/10'
+              rows={4}
+              placeholder='Task description...'
+              className='w-full rounded-md p-3 text-sm dark:placeholder:text-neutral-200 placeholder:text-neutral-500 focus:outline-0 bg-transparent border dark:border-neutral-500 border-neutral-800'
             />
 
-            <div className='flex text-zinc-200 items-center justify-end gap-2 text-xs font-medium'>
+            <div className='flex text-neutral-50 items-center justify-end gap-2 text-xs'>
               <button onClick={handleClose} className='btn-close effect'>
-                <SvgXmark />
+                <SvgX />
                 <span>Close</span>
               </button>
 
@@ -101,7 +100,7 @@ function AddCard ({ column, setCards }) {
           </motion.form>
           )
         : (
-          <motion.button layout onClick={() => setAdding(true)} className='btn-add effect justify-center w-full mt-[18px] text-zinc-200 text-sm font-medium'>
+          <motion.button layout onClick={() => setAdding(true)} className='btn-add effect justify-center w-full mt-[18px] text-neutral-50 text-sm'>
             <SvgPlus />
             <span>New task</span>
           </motion.button>

@@ -1,17 +1,17 @@
-export const SvgKeyframeAlignVertical = (props) => (
+export const SvgKeyframer = (props) => (
   <svg
-    width={16}
-    height={16}
+    width={18}
+    height={18}
     fill='none'
     viewBox='0 0 24 24'
+    stroke='currentColor'
+    strokeLinecap='round'
+    strokeLinejoin='round'
     strokeWidth={2}
+    className='icon icon-tabler icons-tabler-outline icon-tabler-git-commit'
     {...props}
   >
-    <path
-      stroke='currentColor'
-      strokeLinecap='round'
-      strokeLinejoin='round'
-      d='m16.68 12.384-4.22 5.063a.6.6 0 0 1-.92 0l-4.22-5.063a.6.6 0 0 1 0-.768l4.22-5.063a.6.6 0 0 1 .92 0l4.22 5.063a.6.6 0 0 1 0 .768ZM12 22v-2M12 4V2'
-    />
+    <path stroke='none' d='M0 0h24v24H0z' />
+    <path d='M9 12a3 3 0 1 0 6 0 3 3 0 1 0-6 0M12 3v6M12 15v6' />
   </svg>
 )

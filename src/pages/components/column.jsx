@@ -2,7 +2,7 @@ import AddCard from './add-card'
 import DropIndicator from './drop-indicator'
 import Card from './card'
 import { useState } from 'react'
-import { SvgKeyframeAlignVertical } from '../assets/svg-kanban'
+import { SvgKeyframer } from '../assets/svg-kanban'
 
 function Column ({ title, headingColor, cards, column, setCards }) {
   const [active, setActive] = useState(false)
@@ -98,13 +98,13 @@ function Column ({ title, headingColor, cards, column, setCards }) {
 
   return (
     <div className='w-60 shrink-0'>
-      <div className='mt flex items-center justify-between bg-neutral-800 py-1.5 px-3 rounded-md'>
+      <div className='flex items-center justify-between border-neutral-800 dark:border-neutral-500 py-1.5 rounded-md border px-3'>
         <p className={`text-base font-medium ${headingColor}`}>
           {title}
         </p>
-        <div className='flex text-zinc-200 items-center gap-0.5'>
-          <SvgKeyframeAlignVertical className='' />
-          <span className='font-medium'>
+        <div className='flex items-center gap-x-0.5'>
+          <SvgKeyframer />
+          <span className='font-medium text-base'>
             {filteredCards.length}
           </span>
         </div>

@@ -23,14 +23,14 @@ export function BoardPage () {
         <Column
           title='New Task'
           column='new'
-          headingColor='text-zinc-200'
+          headingColor=''
           cards={cards}
           setCards={setCards}
         />
         <Column
           title='Backlog'
           column='backlog'
-          headingColor='text-red-400'
+          headingColor='text-red-500'
           cards={cards}
           setCards={setCards}
         />
@@ -44,14 +44,14 @@ export function BoardPage () {
         <Column
           title='In progress'
           column='doing'
-          headingColor='text-blue-400'
+          headingColor='text-blue-500'
           cards={cards}
           setCards={setCards}
         />
         <Column
           title='Complete'
           column='done'
-          headingColor='text-emerald-400'
+          headingColor='text-emerald-500'
           cards={cards}
           setCards={setCards}
         />

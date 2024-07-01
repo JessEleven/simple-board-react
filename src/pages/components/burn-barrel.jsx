@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { SvgBonfire, SvgTrash } from '../assets/svg-card'
+import { SvgCampfire, SvgTrash } from '../assets/svg-card'
 
 function BurnBarrel ({ setCards }) {
   const [active, setActive] = useState(false)
@@ -30,7 +30,7 @@ function BurnBarrel ({ setCards }) {
           : 'border-neutral-500 bg-neutral-500/20 text-neutral-500'
       }`}
     >
-      {active ? <SvgBonfire className='animate-bounce' /> : <SvgTrash />}
+      {active ? <SvgCampfire className='animate-bounce' /> : <SvgTrash />}
     </article>
   )
 }

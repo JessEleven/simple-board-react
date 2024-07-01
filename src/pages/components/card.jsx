@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import DropIndicator from './drop-indicator'
-import { SvgCopy } from '../assets/svg-card'
+import { SvgClipboard, SvgCopy } from '../assets/svg-card'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import { useEffect, useState } from 'react'
 
@@ -25,7 +25,7 @@ function Card ({ title, id, column, handleDragStart, active }) {
         layoutId={id}
         draggable='true'
         onDragStart={(e) => handleDragStart(e, { title, id, column })}
-        className='cursor-grab flex items-start justify-between rounded-md dark:bg-neutral-800 bg-neutral-300 p-3 active:cursor-grabbing break-words normal-case whitespace-pre-wrap'
+        className='cursor-grab flex items-start justify-between rounded-md border dark:border-neutral-500 border-neutral-800 p-3 active:cursor-grabbing break-words normal-case whitespace-break-spaces'
         // onMouseEnter={() => setHover(true)}
         // onMouseLeave={() => setHover(false)}
       >
@@ -36,7 +36,7 @@ function Card ({ title, id, column, handleDragStart, active }) {
 
         <CopyToClipboard text={title} onCopy={() => setCopied(true)}>
           <button type='button' className='cursor-pointer pt-1.5'>
-            {copied ? '☑️' : <SvgCopy className='hover:text-violet-400 effect' />}
+            {copied ? <SvgClipboard /> : <SvgCopy className='hover:text-violet-400 effect' />}
           </button>
         </CopyToClipboard>
       </motion.article>

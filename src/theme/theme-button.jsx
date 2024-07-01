@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import menuIcons from './index.js'
+import menuIcons from './menu-icon'
 
 function ThemeButton () {
   const [theme, setTheme] = useState(
@@ -8,60 +8,56 @@ function ThemeButton () {
   const element = document.documentElement
   const darkQuery = window.matchMedia('(prefers-color-scheme: dark)')
 
-  const applyTheme = () => {
-    if (theme === 'dark') {
+  function onWindowMatch () {
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && darkQuery.matches)) {
       element.classList.add('dark')
-      localStorage.setItem('theme', 'dark')
-    } else if (theme === 'light') {
-      element.classList.remove('dark')
-      localStorage.setItem('theme', 'light')
     } else {
-      localStorage.removeItem('theme')
-
-      if (darkQuery.matches) {
-        element.classList.add('dark')
-      } else {
-        element.classList.remove('dark')
-      }
+      element.classList.remove('dark')
     }
   }
 
   useEffect(() => {
-    console.log('Initial theme:', theme)
-    console.log('Initial darkQuery.matches:', darkQuery.matches)
-    applyTheme()
-
-    const handleSystemThemeChange = (e) => {
-      console.log('System theme changed:', e.matches)
-      if (!localStorage.getItem('theme')) {
-        if (e.matches) {
-          element.classList.add('dark')
-        } else {
-          element.classList.remove('dark')
+    onWindowMatch()
+    if (darkQuery) {
+      darkQuery.addEventListener('change', (e) => {
+        if (!('theme' in localStorage)) {
+          if (e.matches) {
+            element.classList.add('dark')
+          } else {
+            element.classList.remove('dark')
+          }
         }
-      }
+      })
     }
+  }, [])
 
-    darkQuery.addEventListener('change', handleSystemThemeChange)
-
-    return () => {
-      darkQuery.removeEventListener('change', handleSystemThemeChange)
+  useEffect(() => {
+    switch (theme) {
+      case 'dark':
+        element.classList.add('dark')
+        localStorage.setItem('theme', 'dark')
+        break
+      case 'light':
+        element.classList.remove('dark')
+        localStorage.setItem('theme', 'light')
+        break
+      default:
+        localStorage.removeItem('theme')
+        onWindowMatch()
+        break
     }
-  }, [theme, darkQuery])
+  }, [theme])
 
   return (
-    <div className='flex items-center'>
+    <div className='flex border rounded-md border-orange-500 py-1.5 px-2.5 items-center gap-x-1.5'>
       {menuIcons.map((item) => (
         <button
           type='button'
           key={item.text}
-          onClick={() => {
-            console.log('Setting theme:', item.text)
-            setTheme(item.text)
-          }}
-          className={`w-7 h-7 ${theme === item.text && 'bg-red-400'}`}
+          onClick={() => { setTheme(item.text) }}
+          className={`${theme === item.text && 'text-orange-500'}`}
         >
-          {item.icon}
+          <p>{item.icon}</p>
         </button>
       ))}
     </div>

@@ -46,7 +46,7 @@ function AddCard ({ column, setCards }) {
   }
 
   return (
-    <>
+    <section>
       {adding
         ? (
           <motion.form className='mt-[18px] font-medium' layout onSubmit={handleSubmit}>
@@ -81,9 +81,9 @@ function AddCard ({ column, setCards }) {
               onChange={handleTextChange}
               autoFocus
               value={text}
-              rows={4}
+              rows={5}
               placeholder='Task description...'
-              className='w-full rounded-md p-3 text-sm dark:placeholder:text-neutral-200 placeholder:text-neutral-500 focus:outline-0 bg-transparent border dark:border-neutral-500 border-neutral-800'
+              className='w-full caret-orange-500 resize-none rounded-md p-3 text-sm dark:placeholder:text-neutral-200 placeholder:text-neutral-500 focus:outline-0 bg-transparent border dark:border-neutral-500 border-neutral-800'
             />
 
             <div className='flex text-neutral-50 items-center justify-end gap-x-2 text-xs'>
@@ -105,7 +105,7 @@ function AddCard ({ column, setCards }) {
             <span>New task</span>
           </motion.button>
           )}
-    </>
+    </section>
   )
 }
 

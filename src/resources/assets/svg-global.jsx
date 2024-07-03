@@ -1,3 +1,22 @@
+// Landing page icons
+export const SvgArrowRight = (props) => (
+  <svg
+    width={18}
+    height={18}
+    fill='none'
+    viewBox='0 0 24 24'
+    stroke='currentColor'
+    strokeLinecap='round'
+    strokeLinejoin='round'
+    strokeWidth={2}
+    className='icon icon-tabler icons-tabler-outline icon-tabler-arrow-right'
+    {...props}
+  >
+    <path stroke='none' d='M0 0h24v24H0z' />
+    <path d='M5 12h14M13 18l6-6M13 6l6 6' />
+  </svg>
+)
+
 // Responsive icon
 export const SvgMenu = (props) => (
   <svg

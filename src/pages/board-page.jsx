@@ -17,8 +17,8 @@ export function BoardPage () {
   }, [])
 
   return (
-    <div className='pt-5'>
-      <h3 className='text-center text-2xl font-bold'>Welcome to your board 🎉</h3>
+    <main className='pt-5'>
+      <h2 className='text-center text-2xl font-bold'>Welcome to your board 🎉</h2>
       <div className='flex justify-center h-screen gap-4 pt-5'>
         <Column
           title='New Task'
@@ -57,6 +57,6 @@ export function BoardPage () {
         />
         <BurnBarrel setCards={setCards} />
       </div>
-    </div>
+    </main>
   )
 }

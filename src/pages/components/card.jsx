@@ -17,7 +17,7 @@ function Card ({ title, id, column, handleDragStart, active }) {
   }, [copied])
 
   return (
-    <>
+    <section>
       <DropIndicator beforeId={id} column={column} />
 
       <motion.article
@@ -25,7 +25,7 @@ function Card ({ title, id, column, handleDragStart, active }) {
         layoutId={id}
         draggable='true'
         onDragStart={(e) => handleDragStart(e, { title, id, column })}
-        className='cursor-grab flex items-start justify-between rounded-md border dark:border-neutral-500 border-neutral-800 p-3 active:cursor-grabbing break-words normal-case whitespace-break-spaces'
+        className='cursor-grab flex items-start justify-between rounded-md border dark:border-neutral-500 border-neutral-800 p-3 active:cursor-grabbing break-words normal-case whitespace-pre-wrap'
         // onMouseEnter={() => setHover(true)}
         // onMouseLeave={() => setHover(false)}
       >
@@ -40,7 +40,7 @@ function Card ({ title, id, column, handleDragStart, active }) {
           </button>
         </CopyToClipboard>
       </motion.article>
-    </>
+    </section>
   )
 }
 export default Card

@@ -97,7 +97,7 @@ function Column ({ title, headingColor, cards, column, setCards }) {
   const filteredCards = cards.filter((c) => c.column === column)
 
   return (
-    <div className='w-60 shrink-0'>
+    <section className='w-60 shrink-0'>
       <div className='flex items-center justify-between border-neutral-800 dark:border-neutral-500 py-1.5 rounded-md border px-3'>
         <p className={`text-base font-medium ${headingColor}`}>
           {title}
@@ -136,7 +136,7 @@ function Column ({ title, headingColor, cards, column, setCards }) {
           column={column}
         />
       </div>
-    </div>
+    </section>
   )
 }
 

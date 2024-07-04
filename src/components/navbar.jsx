@@ -4,8 +4,8 @@ import MenuMobile from './menu-mobile'
 
 function Navbar () {
   return (
-    <header className='border-b border-orange-500'>
-      <div className='mx-auto max-w-screen-xl px-4 md:px-8'>
+    <header id='sss5' className='border-b border-orange-500'>
+      <div className='container mx-auto px-4 md:px-8'>
         <div className='flex h-14 items-center justify-between'>
 
           <Link translate='no' to='/' className='flex gap-x-1.5 items-center'>

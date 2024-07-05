@@ -3,7 +3,7 @@ import { SvgGitHub } from '../resources/assets/svg-global'
 
 function Footer () {
   return (
-    <footer className='border-t border-orange-500'>
+    <footer className='border-t border-neutral-500'>
       <div className='container px-0 md:px-8 py-8 mx-auto flex items-center sm:flex-row flex-col'>
 
         <Link translate='no' className='flex items-center font-medium md:justify-start justify-center cursor-text'>

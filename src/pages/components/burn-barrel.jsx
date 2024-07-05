@@ -24,10 +24,10 @@ function BurnBarrel ({ setCards }) {
       onDrop={handleDragEnd}
       onDragOver={handleDragOver}
       onDragLeave={handleDragLeave}
-      className={`mt-[55px] grid h-60 w-60 shrink-0 place-content-center rounded-md border text-3xl ${
+      className={`mt-[60px] grid h-60 w-60 shrink-0 place-content-center rounded-md ring-1 text-3xl ${
         active
-          ? 'border-red-800 bg-red-800/20 text-red-500'
-          : 'border-neutral-500 bg-neutral-500/20 text-neutral-500'
+          ? 'ring-red-800 bg-red-800/20 text-red-500'
+          : 'ring-neutral-500 bg-neutral-500/20 text-neutral-500'
       }`}
     >
       {active ? <SvgCampfire className='animate-bounce' /> : <SvgTrash />}

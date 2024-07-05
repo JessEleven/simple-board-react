@@ -1,6 +1,34 @@
 import { SvgArrowMaximize, SvgDatabase, SvgSparkles } from '../resources/assets/svg-global'
+import { SvgKeyframer } from './assets/svg-kanban'
 
-const menuCadrs = [
+export const listColums = [
+  {
+    title: 'New Task',
+    headingColor: 'text-yellow-500',
+    icon: <SvgKeyframer />,
+    cards: 7
+  },
+  {
+    title: 'Backlog',
+    headingColor: 'text-rose-500',
+    icon: <SvgKeyframer />,
+    cards: 5
+  },
+  {
+    title: 'In progress',
+    headingColor: 'text-blue-500',
+    icon: <SvgKeyframer />,
+    cards: 4
+  },
+  {
+    title: 'Complete',
+    headingColor: 'text-emerald-500',
+    icon: <SvgKeyframer />,
+    cards: 10
+  }
+]
+
+export const menuCadrs = [
   {
     title: 'Drag & Drop',
     icon: <SvgArrowMaximize />,
@@ -20,5 +48,3 @@ const menuCadrs = [
     content: 'Movement and dynamism to the elements without losing performance. Creating an attractive visual experience for users.'
   }
 ]
-
-export default menuCadrs

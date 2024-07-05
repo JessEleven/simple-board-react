@@ -17,45 +17,50 @@ export function BoardPage () {
   }, [])
 
   return (
-    <main className='pt-5'>
-      <h2 className='text-center text-2xl font-bold'>Welcome to your board 🎉</h2>
-      <div className='flex justify-center h-screen gap-4 pt-5'>
-        <Column
-          title='New Task'
-          column='new'
-          headingColor=''
-          cards={cards}
-          setCards={setCards}
-        />
-        <Column
-          title='Backlog'
-          column='backlog'
-          headingColor='text-red-500'
-          cards={cards}
-          setCards={setCards}
-        />
-        {/*  <Column
-          title='Active'
-          column='todo'
-          headingColor='text-yellow-400'
-          cards={cards}
-          setCards={setCards}
-        /> */}
-        <Column
-          title='In progress'
-          column='doing'
-          headingColor='text-blue-500'
-          cards={cards}
-          setCards={setCards}
-        />
-        <Column
-          title='Complete'
-          column='done'
-          headingColor='text-emerald-500'
-          cards={cards}
-          setCards={setCards}
-        />
-        <BurnBarrel setCards={setCards} />
+    <main className='mt-5'>
+      <h2 className='text-center text-xl md:text-2xl font-bold'>Welcome to your board 🎉</h2>
+
+      <div className='mt-5 mx-4 xl:mx-0'>
+        <div className='relative w-full h-[550px] overflow-x-auto'>
+          <div className='flex xl:justify-center absolute w-full gap-4'>
+            <Column
+              title='New'
+              column='new'
+              headingColor='text-yellow-500'
+              cards={cards}
+              setCards={setCards}
+            />
+            <Column
+              title='Backlog'
+              column='backlog'
+              headingColor='text-rose-500'
+              cards={cards}
+              setCards={setCards}
+            />
+            {/*    <Column
+              title='Active'
+              column='todo'
+              headingColor='text-yellow-400'
+              cards={cards}
+              setCards={setCards}
+            /> */}
+            <Column
+              title='In progress'
+              column='doing'
+              headingColor='text-blue-500'
+              cards={cards}
+              setCards={setCards}
+            />
+            <Column
+              title='Complete'
+              column='done'
+              headingColor='text-emerald-500'
+              cards={cards}
+              setCards={setCards}
+            />
+            <BurnBarrel setCards={setCards} />
+          </div>
+        </div>
       </div>
     </main>
   )

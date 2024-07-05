@@ -110,14 +110,12 @@ function Column ({ title, headingColor, cards, column, setCards }) {
         </div>
       </div>
 
-      {column === 'new' && <AddCard column={column} setCards={setCards} />}
-
       <div
         onDrop={handleDragEnd}
         onDragOver={handleDragOver}
         onDragLeave={handleDragLeave}
-        className={`h-full w-full effect rounded-md mt-3 ${
-        active && 'bg-neutral-800/15 dark:bg-neutral-800/30'}`}
+        className={`h-full w-full effect rounded-md mt-4 ${
+        active && 'bg-neutral-800/15 dark:bg-neutral-500/15'}`}
       >
 
         {filteredCards.map((card) => {
@@ -135,6 +133,8 @@ function Column ({ title, headingColor, cards, column, setCards }) {
           beforeId={null}
           column={column}
         />
+
+        {column === 'new' && <AddCard column={column} setCards={setCards} />}
       </div>
     </section>
   )

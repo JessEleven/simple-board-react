@@ -87,12 +87,12 @@ function AddCard ({ column, setCards }) {
             />
 
             <div className='flex text-neutral-50 items-center justify-end gap-x-2 text-xs'>
-              <button onClick={handleClose} className='btn-close effect'>
+              <button onClick={handleClose} className='btn px-3 bg-rose-500'>
                 <SvgX />
                 <span>Close</span>
               </button>
 
-              <button type='submit' className='btn-add mt-1.5 px-3'>
+              <button type='submit' className='btn btn-add px-3'>
                 <SvgPlus />
                 <span>Add task</span>
               </button>
@@ -100,9 +100,9 @@ function AddCard ({ column, setCards }) {
           </motion.form>
           )
         : (
-          <motion.button layout onClick={() => setAdding(true)} className='btn-add justify-center w-full mt-[18px] text-neutral-50 text-sm'>
+          <motion.button layout onClick={() => setAdding(true)} className='btn btn-add justify-center w-full font-medium'>
             <SvgPlus />
-            <span>New task</span>
+            <span>New</span>
           </motion.button>
           )}
     </section>

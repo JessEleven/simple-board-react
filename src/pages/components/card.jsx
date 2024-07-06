@@ -25,18 +25,18 @@ function Card ({ title, id, column, handleDragStart, active }) {
         layoutId={id}
         draggable='true'
         onDragStart={(e) => handleDragStart(e, { title, id, column })}
-        className='cursor-grab flex items-start justify-between rounded-md ring-1 dark:ring-neutral-500 ring-neutral-800 p-3 active:cursor-grabbing break-words normal-case whitespace-pre-wrap'
+        className='flex items-start justify-between rounded-md border dark:border-neutral-500 border-neutral-800 p-3 break-words normal-case whitespace-pre-wrap'
         // onMouseEnter={() => setHover(true)}
         // onMouseLeave={() => setHover(false)}
       >
         <p className='leading-relaxed text-sm font-medium max-w-[190px]'>{title}</p>
         {/* {hover && ( */}
 
-        {/* }  )} */}
+        {/* )} */}
 
         <CopyToClipboard text={title} onCopy={() => setCopied(true)}>
           <button type='button' className='cursor-pointer pt-1.5'>
-            {copied ? <SvgClipboard /> : <SvgCopy className='hover:text-violet-400 effect' />}
+            {copied ? <SvgClipboard className='text-current' /> : <SvgCopy className='hover:text-violet-500 effect' />}
           </button>
         </CopyToClipboard>
       </motion.article>

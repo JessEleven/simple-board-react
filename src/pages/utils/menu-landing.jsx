@@ -1,5 +1,5 @@
-import { SvgArrowMaximize, SvgDatabase, SvgSparkles } from '../resources/assets/svg-global'
-import { SvgKeyframer } from './assets/svg-kanban'
+import { SvgArrowMaximize, SvgDatabase, SvgSparkles } from '../../resources/assets/svg-global'
+import { SvgKeyframer } from '../assets/svg-kanban'
 
 export const listColums = [
   {

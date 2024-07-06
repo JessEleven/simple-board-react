@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import ThemeButton from '../theme/theme-button'
 import MenuMobile from './menu-mobile'
 
@@ -8,24 +8,24 @@ function Navbar () {
       <div className='container mx-auto px-4 md:px-8'>
         <div className='flex h-14 items-center justify-between'>
 
-          <Link translate='no' to='/' className='flex gap-x-1.5 items-center'>
+          <NavLink translate='no' to='/' exact className='flex gap-x-1.5 items-center'>
             <img src='/logo.svg' alt='SB' className='w-7 h-7' />
             <h2 className='text-xl hidden md:flex items-center font-bold'>Simple Board</h2>
-          </Link>
+          </NavLink>
 
           <div className='md:flex md:items-center md:gap-4'>
             <nav className='hidden md:block'>
               <ul className='flex items-center gap-x-4 text-base font-medium'>
                 <li>
-                  <Link to='/board' className='hover:text-orange-500 effect'>
+                  <NavLink to='/board' className={({ isActive }) => isActive && 'text-teal-500'}>
                     Board
-                  </Link>
+                  </NavLink>
                 </li>
 
                 <li>
-                  <Link to='/about' className='hover:text-orange-500 effect'>
+                  <NavLink to='/about' className={({ isActive }) => isActive && 'text-teal-500'}>
                     About
-                  </Link>
+                  </NavLink>
                 </li>
               </ul>
             </nav>

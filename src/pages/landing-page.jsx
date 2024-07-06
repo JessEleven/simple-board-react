@@ -1,13 +1,15 @@
-import { TypeAnimation } from 'react-type-animation'
 import { Link } from 'react-router-dom'
+import { TypeAnimation } from 'react-type-animation'
 import { SvgArrowRight } from '../resources/assets/svg-global'
+import { listColums, menuCadrs } from './utils/menu-landing'
+import Navbar from '../components/navbar'
 import Footer from '../components/footer'
-import { listColums, menuCadrs } from './menu-landing'
 
 export function LandingPage () {
   return (
-    <main className='mt-16 md:mt-24'>
-      <section className='text-4xl md:text-6xl text-center font-bold'>
+    <main>
+      <Navbar />
+      <section className='mt-16 md:mt-24 text-4xl md:text-6xl text-center font-bold'>
         <h1>Organize {' '}
           <span className='relative inline-flex'>
             <span className='bg-gradient-to-r from-pink-500 to-blue-500 blur-lg filter opacity-30 w-40 h-20 absolute inset-0' />

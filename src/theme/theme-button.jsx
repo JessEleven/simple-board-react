@@ -49,13 +49,13 @@ function ThemeButton () {
   }, [theme])
 
   return (
-    <div className='flex border rounded-md border-orange-500 py-1.5 px-2.5 items-center gap-x-1.5'>
+    <div className='flex border rounded-md border-current py-1 px-2.5 items-center gap-x-1.5'>
       {menuIcons.map((item) => (
         <button
           type='button'
           key={item.text}
           onClick={() => { setTheme(item.text) }}
-          className={`${theme === item.text && 'text-orange-500'}`}
+          className={`${theme === item.text && 'text-teal-500'}`}
         >
           <p>{item.icon}</p>
         </button>

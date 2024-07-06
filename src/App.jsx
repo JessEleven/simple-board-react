@@ -1,19 +1,16 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Navbar from './components/navbar'
-import { AboutPage, BoardPage, ErrorPage404, LandingPage } from './pages'
+import { HashRouter, Route, Routes } from 'react-router-dom'
+import { LandingPage, BoardPage, AboutPage, ErrorPage } from './pages'
 
 function App () {
   return (
-    <BrowserRouter>
-      <Navbar />
-
+    <HashRouter>
       <Routes>
         <Route path='/' element={<LandingPage />} />
         <Route path='/board' element={<BoardPage />} />
         <Route path='/about' element={<AboutPage />} />
-        <Route path='*' element={<ErrorPage404 />} />
+        <Route path='*' element={<ErrorPage />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 

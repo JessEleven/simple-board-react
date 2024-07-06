@@ -4,4 +4,4 @@ export * from './board-page'
 export * from './about-page'
 
 // Error page
-export * from './errors/404'
+export * from './error-page'

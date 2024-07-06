@@ -16,9 +16,9 @@ function Footer () {
         </h4>
 
         <span className='inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start'>
-          <Link to='https://github.com/JessEleven' target='_blank' className='tex'>
+          <a href='https://github.com/JessEleven' rel='noreferrer' target='_blank'>
             <SvgGitHub className='fill-current' />
-          </Link>
+          </a>
         </span>
       </div>
     </footer>

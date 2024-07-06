@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import Navbar from '../components/navbar'
 import Column from './components/column'
 import BurnBarrel from './components/burn-barrel'
 
@@ -17,8 +18,10 @@ export function BoardPage () {
   }, [])
 
   return (
-    <main className='mt-5'>
-      <h2 className='text-center text-xl md:text-2xl font-bold'>Welcome to your board 🎉</h2>
+    <main>
+      <Navbar />
+
+      <h2 className='mt-5 text-center text-xl md:text-2xl font-bold'>Welcome to your board 🎉</h2>
 
       <div className='mt-5 mx-4 xl:mx-0'>
         <div className='relative w-full h-[550px] overflow-x-auto'>

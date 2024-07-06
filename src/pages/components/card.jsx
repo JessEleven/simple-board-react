@@ -25,17 +25,17 @@ function Card ({ title, id, column, handleDragStart, active }) {
         layoutId={id}
         draggable='true'
         onDragStart={(e) => handleDragStart(e, { title, id, column })}
-        className='flex items-start justify-between rounded-md border dark:border-neutral-500 border-neutral-800 p-3 break-words normal-case whitespace-pre-wrap'
+        className='flex items-start justify-between rounded-md border dark:border-neutral-500 border-neutral-800 p-3 break-all whitespace-pre-wrap'
         // onMouseEnter={() => setHover(true)}
         // onMouseLeave={() => setHover(false)}
       >
-        <p className='leading-relaxed text-sm font-medium max-w-[190px]'>{title}</p>
+        <p className='leading-normal hyphens-auto normal-case text-sm max-w-[192px]'>{title}</p>
         {/* {hover && ( */}
 
         {/* )} */}
 
         <CopyToClipboard text={title} onCopy={() => setCopied(true)}>
-          <button type='button' className='cursor-pointer pt-1.5'>
+          <button type='button' className='cursor-pointer inset-8 mt-1.5'>
             {copied ? <SvgClipboard className='text-current' /> : <SvgCopy className='hover:text-violet-500 effect' />}
           </button>
         </CopyToClipboard>

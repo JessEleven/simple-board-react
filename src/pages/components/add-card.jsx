@@ -49,7 +49,7 @@ function AddCard ({ column, setCards }) {
     <section>
       {adding
         ? (
-          <motion.form className='mt-[18px] font-medium' layout onSubmit={handleSubmit}>
+          <motion.form className='mt-4 leading-normal' layout onSubmit={handleSubmit}>
             <div className='mb-2.5 py-1 px-3 flex justify-between items-center rounded-md border border-neutral-500'>
               <button type='button' onClick={() => insertIcon('○ ')} className='btn-editor'>
                 <SvgCircle />
@@ -100,7 +100,7 @@ function AddCard ({ column, setCards }) {
           </motion.form>
           )
         : (
-          <motion.button layout onClick={() => setAdding(true)} className='btn btn-add justify-center w-full font-medium'>
+          <motion.button layout onClick={() => setAdding(true)} className='btn btn-add justify-center w-full'>
             <SvgPlus />
             <span>New</span>
           </motion.button>
